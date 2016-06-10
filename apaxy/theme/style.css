@@ -36,9 +36,30 @@ a {
 	color:#61666c;
 	text-decoration:none;
 }
+a {
+	-webkit-transition:all 200ms ease;
+	   -moz-transition:all 200ms ease;
+	    -ms-transition:all 200ms ease;
+	     -o-transition:all 200ms ease;
+	        transition:all 200ms ease;
+}
 a:hover {
 	color:#2a2a2a;
 }
+h1 { cursor: default; }
+h1 a {
+	color:#725757;
+	color:#2a2a2a;
+	border-bottom: 1px solid white;
+	padding: 0 4px;
+}
+h1 a:hover {
+	color:#2a2a2a;
+	/*color:#725757;
+	color: #575872;*/
+	border-bottom: 1px solid rgba(42, 42, 42, 0.72);
+}
+
 /*------------------------------------*\
     Wrapper
 \*------------------------------------*/
@@ -70,6 +91,7 @@ tr {
 }
 tr:hover td {
 	background:#f6f6f6;
+	background: rgba(237, 245, 245, 0.74);
 }
 th {
 	text-align:left;
@@ -98,11 +120,11 @@ td {
 	border-bottom:1px solid #edf1f5;
 	vertical-align:middle;
 	text-align:left;
-	-webkit-transition:background 300ms ease;
-	   -moz-transition:background 300ms ease;
-	    -ms-transition:background 300ms ease;
-	     -o-transition:background 300ms ease;
-	        transition:background 300ms ease;
+	-webkit-transition:background 200ms ease;
+	   -moz-transition:background 200ms ease;
+	    -ms-transition:background 200ms ease;
+	     -o-transition:background 200ms ease;
+	        transition:background 200ms ease;
 }
 td a{
 	display: block;
@@ -119,4 +141,10 @@ tr.parent a[href^="/"] {
 .footer {
 	text-align:center;
 	font-size:.75em;
+}
+.footer a {
+	color: black;
+}
+.footer a:hover {
+	text-decoration: underline;
 }

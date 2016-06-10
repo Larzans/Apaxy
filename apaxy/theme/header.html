@@ -1,2 +1,37 @@
+<script language="JavaScript">
+	var prefix = "http://localhost";
+	var loc = location.href;
+	var dir = loc.replace(prefix,"");
+	var name = dir.substring(0, dir.length-1);
+	
+	var folders = dir.split('/');
+	for (var i = 0; i < folders.length; i++) {
+		if (folders[i] == "") { 
+			folders.splice(i, 1);
+			i--;
+		}
+	}
+	
+	var output = "<h1>";
+	var p = prefix;
+
+	if (folders.length>0) {
+		output += '<a href="' + p + '">/</a>';
+		for (var i = 0; i < (folders.length - 1); i++) {
+			p += '/' + folders[i];
+			// console.log(prefix + '/' + folders[i]);
+			output += '<a href="' + p + '">' + decodeURIComponent(folders[i]) + '</a>/';
+		}
+		;
+		output += decodeURIComponent(folders[folders.length - 1]);
+	} else {
+		output += '/';
+	}
+	output += "</h1>";
+	document.write(output);
+	
+	//console.log(output);
+
+</script>
 <div class="wrapper">
-<!-- we open the `wrapper` element here, but close it in the `footer.html` file -->
+	<!-- we open the `wrapper` element here, but close it in the `footer.html` file -->
